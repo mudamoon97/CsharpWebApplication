@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Square Root Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">The Square Root Web App</h1>
+    <h1>Kindly Input Your Number Respectively</h1>
+</div>
+@{
+    
+    if(ViewBag.Result1 > ViewBag.Result2)
+    {
+        <div>
+            <p>Your result is : @ViewBag.Result1</p>
+        </div>
+    }    
+    
+}
+
+
+
+
+
+<div>
+    <form asp-controller="SquRoot" asp-action="Sqrt" method="POST">
+        <input type="number" placeholder="First Number" name="firstNumber"/>
+        <input type="number" placeholder="Second Number" name="secondNumber"/><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+</div>
